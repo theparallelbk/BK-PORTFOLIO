@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #4a148c, #ff4081);
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        .about-section {
+            padding: 60px 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+        .about-img {
+            width: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .about-img:hover {
+            transform: scale(1.1);
+        }
+        .animated-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .skills-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .skill {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .skill-name {
+            flex: 1;
+        }
+        .progress {
+            flex: 3;
+        }
+        .categories {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .category-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s;
+        }
+        .category-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container about-section">
+    <h2 class="mb-4">About Me</h2>
+    <img src="D:\MY ALL PROJECTS\SIMPLE PORTFOLIO WEB PAGES\304f439199723f21270a440ffc0cb3a7 (2).jpg" alt="Profile Picture" class="about-img mb-4">
+    
+    <div class="animated-text">
+        <p>Hello! I’m <strong>Badal Kumar</strong>, As a passionate web developer and digital marketer, I thrive at the intersection of creativity and technology. I specialize in building stunning, user-friendly websites that not only captivate but also convert. With a knack for data-driven strategies, I optimize digital campaigns to achieve remarkable results. My mission? To elevate your online presence and drive your business forward. Let’s create something extraordinary together!</p>
+    </div>
+    
+    <div class="animated-text" style="animation-delay: 0.2s;">
+        <p>With a strong command of modern web technologies like <strong>HTML, CSS, JavaScript, PHP</strong> and frameworks like <strong>Bootstrap</strong> and <strong>React</strong>, I craft applications that seamlessly blend functionality and visual appeal. As a digital marketer, I leverage data-driven strategies to amplify online presence and drive user engagement, ensuring that every project not only captivates but also converts.
+
+        </p>
+    </div>
+    
+    <div class="animated-text" style="animation-delay: 0.4s;">
+        <p>In my free time, I enjoy exploring the creativity & imagination, diving into sci-tech literature, and listening to positive musics for my soul. I'm always looking to learn and grow in my field.</p>
+    </div>
+
+    <div class="skills-section">
+        <h3>Programming Lang</h3>
+        <div class="skill">
+            <span class="skill-name">HTML</span>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">CSS</span>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">JavaScript</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">React</span>
+            <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 75%;">65%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">PHP</span>
+            <div class="progress">
+                <div class="progress-bar bg-secondary" style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">Python</span>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 65%;">75%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="categories">
+        <h3>Areas of Expertise</h3>
+        <div class="category-item">
+            <i class="fas fa-code"></i> Front-End Development
+        </div>
+        <div class="category-item">
+            <i class="fas fa-server"></i> Back-End Development
+        </div>
+        <div class="category-item">
+            <i class="fas fa-mobile-alt"></i> Website Development
+        </div>
+        <div class="category-item">
+            <i class="fas fa-desktop"></i> UI/UX Design
+        </div>
+        <div class="category-item">
+            <i class="fas fa-chart-line"></i> SEO Optimization
+        </div>
+        <div class="category-item">
+            <i class="fas fa-cloud"></i> Cloud Computing
+        </div>
+        <div class="category-item">
+            <i class="fas fa-lock"></i> Digital Marketing
+        </div>
+        <div class="category-item">
+            <i class="fas fa-desktop"></i> Accounting       
+        </div>
+        <div class="category-item">
+            <i class="fas fa-desktop"></i> Management
+        </div>
+    </div>
+
+    <div class="footer text-center">
+        <p>Connect with me on <a href="https://theparallelbk.github.io/Portfolio-Website-BK/" class="text-info">LinkedIn</a> | <a href="https://github.com/theparallelbk" class="text-info">GitHub</a></p>
+        <p>&copy; 2024 BK. All Rights Reserved.</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

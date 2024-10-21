@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Experience</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #4a90e2, #50e3c2);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .interactive-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .interactive-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        #fact {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            cursor: pointer;
+            transition: transform 0.2s;
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ɃꝀ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="interactive.html">Interactive Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1 class="hero-title">Interactive Experience</h1>
+        <p>Engage with fun quizzes, learning sections, and interactive elements!</p>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center">Quick Quiz</h2>
+        <div class="interactive-card p-4">
+            <h5 id="quiz-question">What is the capital of France?</h5>
+            <div class="question">
+                <button class="btn btn-primary" onclick="checkAnswer('Paris')">Paris</button>
+                <button class="btn btn-primary" onclick="checkAnswer('Berlin')">Berlin</button>
+                <button class="btn btn-primary" onclick="checkAnswer('Madrid')">Madrid</button>
+                <button class="btn btn-primary" onclick="checkAnswer('Rome')">Rome</button>
+            </div>
+            <p id="quiz-result" class="mt-3"></p>
+        </div>
+
+        <h2 class="text-center">Interactive Learning</h2>
+        <div class="interactive-card p-4">
+            <h5>Click to learn more about JavaScript!</h5>
+            <button class="btn btn-info" onclick="toggleInfo()">Show Info</button>
+            <p id="js-info" style="display:none;" class="mt-3">
+                JavaScript is a versatile programming language primarily used for creating dynamic content on websites. It enables interactive features, control multimedia, and much more!
+            </p>
+        </div>
+
+        <h2 class="text-center">Random Fact Generator</h2>
+        <div class="interactive-card p-4">
+            <button class="btn btn-success" onclick="generateFact()">Get a Random Fact</button>
+            <p id="fact" class="mt-3"></p>
+        </div>
+
+        <h2 class="text-center">Image Gallery</h2>
+        <div class="interactive-card p-4">
+            <h5>Select a Category:</h5>
+            <select id="category-select" class="form-control mb-3" onchange="loadImages()">
+                <option value="nature">Nature</option>
+                <option value="cities">Cities</option>
+                <option value="animals">Animals</option>
+            </select>
+            <div id="gallery" class="gallery row"></div>
+        </div>
+
+        <div id="imageModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Image Preview</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modal-image" src="" class="img-fluid" alt="Preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const facts = [
+            "Honey never spoils.",
+            "Bananas are berries, but strawberries aren't.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Octopuses have three hearts.",
+            "A day on Venus is longer than a year on Venus."
+        ];
+
+        const questions = [
+            { question: "What is the capital of France?", options: ["Paris", "Berlin", "Madrid", "Rome"], answer: "Paris" },
+            { question: "What is the capital of Germany?", options: ["Paris", "Berlin", "Madrid", "Rome"], answer: "Berlin" },
+            { question: "What is the capital of Spain?", options: ["Paris", "Berlin", "Madrid", "Rome"], answer: "Madrid" },
+            { question: "What is the capital of Italy?", options: ["Paris", "Berlin", "Madrid", "Rome"], answer: "Rome" }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function loadImages() {
+            const category = document.getElementById('category-select').value;
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            const images = {
+                nature: ["images/nature1.jpg", "images/nature2.jpg", "images/nature3.jpg"],
+                cities: ["images/city1.jpg", "images/city2.jpg", "images/city3.jpg"],
+                animals: ["images/animal1.jpg", "images/animal2.jpg", "images/animal3.jpg"]
+            };
+
+            images[category].forEach(src => {
+                const col = document.createElement('div');
+                col.className = 'col-md-4';
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = "Image";
+                img.className = "img-fluid";
+                img.onclick = () => showImage(src);
+                col.appendChild(img);
+                gallery.appendChild(col);
+            });
+        }
+
+        function checkAnswer(answer) {
+            const resultText = document.getElementById('quiz-result');
+            if (answer === questions[currentQuestionIndex].answer) {
+                resultText.innerHTML = '<span class="text-success">Correct! ' + answer + ' is the capital.</span>';
+                currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+                document.getElementById('quiz-question').innerText = questions[currentQuestionIndex].question;
+            } else {
+                resultText.innerHTML = '<span class="text-danger">Wrong answer. Try again!</span>';
+            }
+        }
+
+        function toggleInfo() {
+            const info = document.getElementById('js-info');
+            info.style.display = info.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+
+        function showImage(src) {
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = src;
+            $('#imageModal').modal('show');
+        }
+
+        // Load initial images
+        window.onload = loadImages;
+    </script>
+</body>
+</html>

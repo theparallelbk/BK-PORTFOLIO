@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BK</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="D:\MY ALL PROJECTS\SIMPLE PORTFOLIO WEB PAGES\304f439199723f21270a440ffc0cb3a7 (2).jpg" type="image/x-icon">
+
+    <style>
+        body {
+            background-image: url('https://64.media.tumblr.com/f795bfecc3f27fac4ffca5aa4ed3724c/tumblr_ou1ty0XM2S1uzwgsuo1_400.gif'); /* Add your 3D background image here */
+            background-size: cover;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .icon {
+            border-radius: 50%;
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            object-fit: cover;
+            margin-right: 10px; /* Space between icon and title */
+        }
+        .icon {
+            border-radius: 50%; /* Makes the image round */
+            width: 50px; /* Set the desired width */
+            height: 50px; /* Set the desired height */
+            object-fit: cover; /* Ensures the image covers the entire area */
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 150px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            animation: slideIn 1s ease-in-out;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: #ccc;
+            animation: fadeIn 1.5s ease-in-out;
+            margin-bottom: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .btn-custom {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #e64a19;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .additional-info {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .testimonials {
+            margin: 60px 0;
+        }
+
+        .testimonial-item {
+            padding: 20px;
+            border-left: 5px solid #ff5722;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .testimonial-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ɃꝀ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="intreactive.html">Intreactivity</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1 class="hero-title">Hello, I'm Badal Kumar</h1>
+        <p class="hero-subtitle">A Passionate Web Developer</p>
+        <a href="projects.html" class="btn btn-custom">Explore My Work</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">What I Do</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-code service-icon"></i>
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Building responsive and user-friendly websites using the latest technologies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-paint-brush service-icon"></i>
+                        <h5 class="card-title">UI/UX Design</h5>
+                        <p class="card-text">Creating intuitive interfaces and experiences that enhance user satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-database service-icon"></i>
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">I offer digital marketing services to help businesses grow online. This includes social media management, SEO, content creation, and online advertising to reach more customers effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-info text-center">
+            <h3>Why Choose Me?</h3>
+            <p>With a passion for web development and digital marketing, a commitment to delivering quality, I aim to provide innovative solutions that meet client needs.</p>
+            <p>I'm continually learning and adapting to new trends and technologies to stay ahead in this ever-evolving field.</p>
+        </div>
+
+        <div class="testimonials">
+            <h2 class="text-center">What Clients Say</h2>
+            <div class="testimonial-item">
+                <p><strong>Rahul K.</strong></p>
+                <p>"An exceptional developer! Always delivers on time and exceeds expectations."</p>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Safin</strong></p>
+                <p>"Creative and reliable. A pleasure to work with!"</p>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Gaurav ( Resturant Owner )</strong></p>
+                <p>"Transformed our website completely. Couldn't be happier!"</p>
+            </div>
+            <div class="testimonial-item">
+                <p><strong>Deep ( Online Business )</strong></p>
+                <p>"Excellent digital marketing! Our online visibility has greatly improved!"</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 text-white">Frequently Asked Questions</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer('faq2')">
+                        <i class="fas fa-plus-circle"></i> What are your qualifications and experience in digital marketing and web development?
+                    </h5>
+                    <p id="faq2" class="faq-answer" style="display:none;">
+                        I have extensive experience in both digital marketing and web development, with certifications in SEO, social media management, and web design. I continually update my skills to stay current in these rapidly evolving fields.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer('faq2')">
+                        <i class="fas fa-plus-circle"></i> What programming languages do you specialize in?
+                    </h5>
+                    <p id="faq2" class="faq-answer" style="display:none;">
+                        I specialize in JavaScript, Python, and PHP, focusing on front-end development using frameworks like React and Bootstrap.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer('faq3')">
+                        <i class="fas fa-plus-circle"></i> How do you stay updated with the latest technologies?
+                    </h5>
+                    <p id="faq3" class="faq-answer" style="display:none;">
+                        I follow industry blogs, participate in webinars, and attend tech conferences to keep up with the latest trends and technologies.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer('faq4')">
+                        <i class="fas fa-plus-circle"></i> Can you work on team projects?
+                    </h5>
+                    <p id="faq4" class="faq-answer" style="display:none;">
+                        Yes, I enjoy collaborating with others and believe that teamwork leads to better outcomes in projects.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5 class="faq-question" onclick="toggleAnswer('faq5')">
+                        <i class="fas fa-plus-circle"></i> What is your approach to problem-solving?
+                    </h5>
+                    <p id="faq5" class="faq-answer" style="display:none;">
+                        I approach problem-solving methodically by breaking down the problem into smaller parts, researching potential solutions, and testing them iteratively.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .faq-item {
+            margin-bottom: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            transition: background 0.3s;
+            color: white; /* Bold white text */
+        }
+    
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.1); /* Lighter on hover */
+        }
+    
+        .faq-question {
+            cursor: pointer;
+            color: #ffffff; /* Bold white question text */
+            font-weight: bold;
+        }
+    
+        .faq-answer {
+            margin-top: 10px;
+            color: #ffffff; /* Bold white answer text */
+            font-size: 1rem; /* Adjust size for readability */
+        }
+    </style>
+    
+    <script>
+        function toggleAnswer(faqId) {
+            const answer = document.getElementById(faqId);
+            const icon = answer.previousElementSibling.querySelector('i');
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+                icon.classList.remove('fa-plus-circle');
+                icon.classList.add('fa-minus-circle');
+            } else {
+                answer.style.display = "none";
+                icon.classList.remove('fa-minus-circle');
+                icon.classList.add('fa-plus-circle');
+            }
+        }
+    </script>
+
+<section id="user-stats" style="display: flex; justify-content: center; padding: 20px; flex-wrap: wrap;">
+    <div class="card" style="margin: 10px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center;">
+        <div class="title" style="font-weight: bold; margin-bottom: 10px;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/user.png" alt="Active Users" style="vertical-align: middle; width: 24px; margin-right: 5px;"> Active Users
+        </div>
+        <div class="number" id="activeUsers" style="font-size: 2em; color: #007bff;">9</div>
+    </div>
+    <div class="card" style="margin: 10px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center;">
+        <div class="title" style="font-weight: bold; margin-bottom: 10px;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/online-shop.png" alt="Visits Today" style="vertical-align: middle; width: 24px; margin-right: 5px;"> Visits Today
+        </div>
+        <div class="number" id="visitsToday" style="font-size: 2em; color: #007bff;">24</div>
+    </div>
+    <div class="card" style="margin: 10px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center;">
+        <div class="title" style="font-weight: bold; margin-bottom: 10px;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/hourglass.png" alt="Visits Yesterday" style="vertical-align: middle; width: 24px; margin-right: 5px;"> Visits Yesterday
+        </div>
+        <div class="number" id="visitsYesterday" style="font-size: 2em; color: #007bff;">33</div>
+    </div>
+    <div class="card" style="margin: 10px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center;">
+        <div class="title" style="font-weight: bold; margin-bottom: 10px;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/calendar.png" alt="Visits This Month" style="vertical-align: middle; width: 24px; margin-right: 5px;"> Visits This Month
+        </div>
+        <div class="number" id="visitsMonthly" style="font-size: 2em; color: #007bff;">385</div>
+    </div>
+    <div class="card" style="margin: 10px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center;">
+        <div class="title" style="font-weight: bold; margin-bottom: 10px;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/ticket.png" alt="Total Visits" style="vertical-align: middle; width: 24px; margin-right: 5px;"> Total Visits
+        </div>
+        <div class="number" id="totalVisits" style="font-size: 2em; color: #007bff;">4000</div>
+    </div>
+</section>
+
+<style>
+    @keyframes change {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+</style>
+
+<script>
+    let visitsToday = 24;
+    let visitsMonthly = 385;
+    let totalVisits = 4000;
+    let activeUsers = 9;
+    let visitsYesterday = 33;
+
+    function updateVisits() {
+        // Increase each count by 1
+        visitsToday += 1; 
+        visitsMonthly += 1; 
+        totalVisits += 1;
+        activeUsers += 1; // For demonstration
+        visitsYesterday += 1; // For demonstration
+
+        document.getElementById('visitsToday').innerText = visitsToday;
+        document.getElementById('visitsMonthly').innerText = visitsMonthly;
+        document.getElementById('totalVisits').innerText = totalVisits;
+        document.getElementById('activeUsers').innerText = activeUsers;
+        document.getElementById('visitsYesterday').innerText = visitsYesterday;
+    }
+
+    // Initial update every 3 seconds for the first change
+    let initialUpdate = setInterval(updateVisits, 3000);
+
+    // After the first update, switch to 9 seconds for all updates
+    setTimeout(() => {
+        clearInterval(initialUpdate);
+        setInterval(updateVisits, 9000); // Update all visits every 9 seconds
+    }, 3000);
+</script>
+
+    
+    
+    <div class="container text-center">
+        <a href="https://wa.me/+919798114322" class= "btn" style="background-color: #4285F4; color: white; border-radius: 5px; padding: 10px 20px; text-decoration: none; transition: background-color 0.3s;">HIRE ME!</a>
+    </div>
+    <style>
+        .btn:hover {
+            background-color: #34A853; /* Change to Google green on hover */
+        }
+    </style>
+
+
+
+<div class="container text-center my-5">
+    <h1>Explore Ourself!</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <a href="skills.html" class="shortcut bg-pink text-white">
+                <h3>Skills</h3>
+                <p>Explore our skills!</p>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="about.html" class="shortcut bg-purple text-white">
+                <h3>About Us</h3>
+                <p>Know about ourself!</p>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="projects.html" class="shortcut bg-pink text-white">
+                <h3>Projects</h3>
+                <p>See our projects!</p>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="contact.html" class="shortcut bg-purple text-white">
+                <h3>Contact US</h3>
+                <p>Contact us for more info!</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .shortcut {
+        margin: 20px;
+        padding: 30px;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.5rem;
+        position: relative;
+    }
+    .shortcut:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .shortcut::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: opacity 0.3s;
+        z-index: 0;
+    }
+    .shortcut:hover::before {
+        opacity: 0;
+    }
+    .shortcut h3 {
+        z-index: 1;
+    }
+</style>
+
+    
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 This is Badal Kumar. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

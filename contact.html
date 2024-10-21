@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        .list-unstyled li {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        /* Form container styles */
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px; /* Set a max-width for the form */
+            margin: 0 auto; /* Center the form */
+        }
+
+        /* Input and textarea styles */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border: 1px solid #4facfe;
+            outline: none;
+        }
+
+        /* Button styles */
+        button {
+            background: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: #00f2fe;
+            transform: scale(1.05);
+        }
+
+        /* Honeypot Spam Protection */
+        .hidden {
+            display: none;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+            text-align: center; /* Center align contact details */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ɃꝀ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5 d-flex flex-column align-items-center">
+        <h2>Contact Me</h2>
+
+        <div class="form-container">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="46898a6b-9f79-4ede-9ab2-92c18fe26c1c">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+
+        <div class="contact-details">
+            <h4>Connect with Me</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:your_email@example.com">theparallelbk@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> <a href="tel:+123456789">+91 9798114322</a></li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://theparallelbk.github.io/Portfolio-Website-BK/" target="_blank">LinkedIn</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/theparallelbk" target="_blank">GitHub</a></li>
+            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZy8NncS3I1f9I-Fq4OocYlAL0aQ4JDTCmMg&s" alt="Contact" class="img-fluid mt-3">
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Badal Kumar. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Form submission handling (for demo purposes)
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            alert('Message sent! Thank you for reaching out.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
+
+
